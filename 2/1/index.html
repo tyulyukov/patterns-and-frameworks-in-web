@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Користувачі</title>
+    <link href="./index.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <header class="header">
+        <h1>Користувачі</h1>
+        <p class="muted">User / Admin / Moderator / SuperAdmin</p>
+    </header>
+
+    <section class="card">
+        <h2>Створити користувача</h2>
+        <form class="grid" id="create-form">
+            <label class="field">
+                <span>Ім'я</span>
+                <input id="name" placeholder="Ім'я" required type="text">
+            </label>
+            <label class="field">
+                <span>Email</span>
+                <input id="email" placeholder="email@пошта" required type="email">
+            </label>
+            <label class="field">
+                <span>Пароль</span>
+                <input id="password" placeholder="••••••" required type="password">
+            </label>
+            <label class="field">
+                <span>Роль</span>
+                <select id="role" required>
+                    <option value="User">User</option>
+                    <option value="Moderator">Moderator</option>
+                    <option value="Admin">Admin</option>
+                    <option value="SuperAdmin">SuperAdmin</option>
+                </select>
+            </label>
+            <div class="actions">
+                <button class="btn primary" type="submit">Додати</button>
+            </div>
+        </form>
+    </section>
+
+    <section class="card">
+        <div class="toolbar">
+            <h2>Список користувачів</h2>
+            <div class="right">
+                <label class="field compact">
+                    <span class="sr-only">Пошук</span>
+                    <input id="search" placeholder="Пошук за ім'ям або email" type="text">
+                </label>
+            </div>
+        </div>
+        <div class="list" id="users"></div>
+    </section>
+
+    <section class="grid cols-2">
+        <div class="card">
+            <h2>Дії над вибраним</h2>
+            <div class="muted" id="selected">Немає вибраного користувача</div>
+            <div class="actions stack">
+                <button class="btn" id="action-warn">Попередити</button>
+                <div class="row">
+                    <input class="w-24" id="mute-min" min="0" type="number" value="1">
+                    <span class="muted">хв</span>
+                    <button class="btn" id="action-mute">Зам'ютити</button>
+                </div>
+                <div class="row">
+                    <input class="flex-1" id="check-pass" placeholder="Введіть пароль" type="password">
+                    <button class="btn" id="action-check">Перевірити пароль</button>
+                </div>
+                <div class="row">
+                    <input class="flex-1" id="new-pass" placeholder="Новий пароль" type="text">
+                    <button class="btn" id="action-reset">Скинути пароль</button>
+                </div>
+                <button class="btn danger" id="action-delete">Видалити</button>
+            </div>
+            <p class="muted small">Дії доступні залежно від ролі активного користувача.</p>
+        </div>
+
+        <div class="card">
+            <h2>Активний користувач</h2>
+            <div class="row">
+                <label class="field">
+                    <span>Виберіть активного</span>
+                    <select id="active-user"></select>
+                </label>
+            </div>
+            <div class="muted" id="active-info"></div>
+        </div>
+    </section>
+
+    <section class="card">
+        <div class="toolbar">
+            <h2>Журнал подій</h2>
+            <div class="right">
+                <button class="btn" id="clear-log">Очистити журнал</button>
+            </div>
+        </div>
+        <div class="log" id="log"></div>
+    </section>
+</div>
+
+<script src="./index.js" type="module"></script>
+</body>
+</html>
+
+
