@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Система Управління Користувачами</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Система Управління Користувачами</h1>
+            <p class="subtitle">Factory Method + Singleton Pattern</p>
+        </header>
+
+        <main>
+            <section class="card">
+                <h2>Створення Користувача</h2>
+                <form id="userForm">
+                    <div class="form-group">
+                        <label for="userType">Тип користувача</label>
+                        <select id="userType" required>
+                            <option value="">Оберіть тип...</option>
+                            <option value="user">User</option>
+                            <option value="admin">Admin</option>
+                            <option value="moderator">Moderator</option>
+                            <option value="superadmin">SuperAdmin</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="userName">Ім'я</label>
+                        <input type="text" id="userName" required placeholder="Введіть ім'я">
+                    </div>
+                    <div class="form-group">
+                        <label for="userEmail">Email</label>
+                        <input type="email" id="userEmail" required placeholder="user@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="userPassword">Пароль</label>
+                        <input type="password" id="userPassword" required placeholder="Введіть пароль">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Створити Користувача</button>
+                </form>
+            </section>
+
+            <section class="card">
+                <h2>Список Користувачів</h2>
+                <div id="usersList"></div>
+            </section>
+
+            <section class="card">
+                <h2>Журнал Дій</h2>
+                <div id="logsList"></div>
+            </section>
+
+            <section class="card">
+                <h2>Тестовий Сценарій</h2>
+                <button id="runTestScenario" class="btn btn-secondary">Запустити Тестовий Сценарій</button>
+            </section>
+        </main>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
