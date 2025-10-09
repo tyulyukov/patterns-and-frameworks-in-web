@@ -69,15 +69,19 @@ function openViaLocalPrefill(payload) {
 
 function openInBrowser(url) {
   const platform = process.platform;
-  if (platform === 'darwin') {
-    spawn('open', [url], { stdio: 'ignore', detached: true }).unref();
-    return;
+  try {
+    if (platform === 'darwin') {
+      spawn('open', [url], { stdio: 'ignore', detached: true }).unref();
+      return;
+    }
+    if (platform === 'win32') {
+      spawn('cmd', ['/c', 'start', '', url], { stdio: 'ignore', detached: true }).unref();
+      return;
+    }
+    spawn('xdg-open', [url], { stdio: 'ignore', detached: true }).unref();
+  } catch (error) {
+    console.error('Failed to open browser:', error);
   }
-  if (platform === 'win32') {
-    spawn('cmd', ['/c', 'start', '', url], { stdio: 'ignore', detached: true }).unref();
-    return;
-  }
-  spawn('xdg-open', [url], { stdio: 'ignore', detached: true }).unref();
 }
 
 async function main() {
