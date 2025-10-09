@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Завдання 1 — Адаптер геокоординат</title>
+    <link href="./index.css" rel="stylesheet">
+</head>
+<body>
+<main class="container">
+    <h1>Адаптер геокоординат</h1>
+    <p class="muted">Введіть рядки формату "широта, довгота". Діапазони: широта [-90, 90], довгота [-180, 180].</p>
+    <label class="label" for="geo-input">Вхідні дані</label>
+    <textarea class="textarea" id="geo-input" rows="6">48.8566, 2.3522
+59.8468, 155.6698
+148.8566, 202.3522</textarea>
+    <div class="actions">
+        <button class="button" id="convert">Конвертувати</button>
+    </div>
+    <h2>Результат</h2>
+    <pre class="pre" id="output"></pre>
+</main>
+<script src="./index.js"></script>
+</body>
+</html>
+

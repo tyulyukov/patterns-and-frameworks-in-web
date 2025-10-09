@@ -1,0 +1,128 @@
+:root {
+  --bg: #0b0b0c;
+  --fg: #e5e7eb;
+  --muted: #9ca3af;
+  --card: #111113;
+  --border: #1f2429;
+  --accent: #22c55e;
+  --accent-fg: #0b0b0c
+}
+
+* {
+  box-sizing: border-box
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+  line-height: 1.5
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 28px;
+  display: grid;
+  gap: 20px
+}
+
+h1 {
+  font-size: 24px;
+  margin: 0 0 8px
+}
+
+h2 {
+  font-size: 18px;
+  margin: 0 0 8px
+}
+
+.muted {
+  color: var(--muted)
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px
+}
+
+.label {
+  display: block;
+  margin: 12px 0 6px;
+  color: var(--muted)
+}
+
+.textarea {
+  width: 100%;
+  background: var(--card);
+  color: var(--fg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px;
+  min-height: 120px;
+  outline: none
+}
+
+.textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--accent) 20%, transparent)
+}
+
+.input {
+  width: 100%;
+  background: var(--card);
+  color: var(--fg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px;
+  outline: none
+}
+
+.input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--accent) 20%, transparent)
+}
+
+.actions {
+  margin: 14px 0
+}
+
+.button {
+  background: var(--accent);
+  color: var(--accent-fg);
+  border: none;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-weight: 700;
+  cursor: pointer
+}
+
+.button:focus {
+  outline: 2px solid color-mix(in oklab, var(--accent) 60%, transparent)
+}
+
+.pre {
+  background: var(--bg);
+  border: 1px dashed var(--border);
+  border-radius: 10px;
+  padding: 12px;
+  overflow: auto
+}
+
+.toggles {
+  display: flex;
+  gap: 12px;
+  margin: 8px 0
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--fg)
+}
+

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Завдання 3 — Адаптер валют і динамічні декоратори</title>
+    <link href="./index.css" rel="stylesheet">
+</head>
+<body>
+<main class="container">
+    <h1>Адаптер валют і динамічні декоратори</h1>
+    <section class="card">
+        <h2>Нормалізація валют</h2>
+        <p class="muted">Підтримуються формати: "USD:1.12", "USD 1.12", { code, value }, [code, rate], { currency, rate
+            }.</p>
+        <label class="label" for="currency-input">Вхідні дані</label>
+        <textarea class="textarea" id="currency-input" rows="8">USD:1.12
+USD 1.12
+{"code":"EUR","value":0.93}
+["GBP",1.25]
+{"currency":"UAH","rate":41.3}</textarea>
+        <div class="actions">
+            <button class="button" id="normalize">Нормалізувати</button>
+        </div>
+        <pre class="pre" id="currency-output"></pre>
+    </section>
+
+
+</main>
+<script src="./index.js"></script>
+</body>
+</html>
+

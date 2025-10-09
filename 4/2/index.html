@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Завдання 2 — Декоратор сповіщень</title>
+    <link href="./index.css" rel="stylesheet">
+</head>
+<body>
+<main class="container">
+    <h1>Декоратор сповіщень</h1>
+    <p class="muted">Базовий сповіщувач: Email. Декоратори: Telegram, WhatsApp, Push. Каскад викликає всі канали.</p>
+    <div class="toggles">
+        <label class="checkbox"><input id="tg" type="checkbox"/> Telegram</label>
+        <label class="checkbox"><input id="wa" type="checkbox"/> WhatsApp</label>
+        <label class="checkbox"><input id="push" type="checkbox"/> Push</label>
+    </div>
+    <label class="label" for="message">Повідомлення</label>
+    <input class="input" id="message" placeholder="Введіть текст повідомлення"/>
+    <div class="actions">
+        <button class="button" id="send">Надіслати каскадом</button>
+    </div>
+    <h2>Лог</h2>
+    <pre class="pre" id="log"></pre>
+</main>
+<script src="./index.js"></script>
+</body>
+</html>
+
